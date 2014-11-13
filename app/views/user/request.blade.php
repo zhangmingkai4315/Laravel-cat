@@ -3,11 +3,11 @@
 
 <div class="container">
 <div class="row">
-    <div class="col-md-5 col-md-offset-1">
+    <div class="col-md-3 col-md-offset-1">
 @if (Session::has('error'))
 {{ trans(Session::get('reason')) }}
 @elseif (Session::has('success'))
-An e-mail with the password reset has been sent.
+<p>重置密码邮件已发送，请尽快查收您的邮箱！</p>
 @endif
 
 {{
@@ -21,10 +21,13 @@ Form::open([
 
 
 <div class="form-group">
-{{Form::label("email","Email")}}
+{{Form::label("email","请输入个人注册使用邮箱：")}}
 {{Form::text("email",Input::get("email"),
-["placeholder"=>"john@example.com"]
+["placeholder"=>"个人邮箱","class"=>"form-control"
+]
 )}}
+</div>
+<div class="form-group">
 {{Form::submit("reset",["class"=>"btn btn-primary btn-block"])}}
 {{Form::close()}}
 

@@ -51,8 +51,14 @@
         </title>
     </head>
     <body>
+    <div class="header_part">
      @include("header")
+    </div>
+    <div class="content_part">
      @yield("content")
+        </div>
+    <div class="footer_part">
      @include("footer")
+    </div>
     </body>
 </html>
