@@ -257,8 +257,19 @@ public function profileAction(){
 
                 }
                 return View::make("user/SignIn",$data);
+    }
+
+    function myProfileAction(){
 
 
+        return View::make("user/myprofile");
 
     }
+    function updateProfileAction(){
+
+        return View::make("user/updateprofile");
+    }
+
+
+
 }
