@@ -35,7 +35,7 @@ class UserController
                     "password"=>Input::get("password")
                 ];
 
-                if(Auth::attempt($credentials))
+                if(Auth::attempt($credentials,true))
                 {
 
                     return Redirect::route("user/profile");
@@ -269,6 +269,8 @@ public function profileAction(){
 
         return View::make("user/updateprofile");
     }
+
+
 
 
 

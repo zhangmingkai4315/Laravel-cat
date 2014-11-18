@@ -7,6 +7,8 @@
 </div>
 <div class="row">
 <div class="col-md-3 col-md-offset-1">
+<div class="panel panel-default">
+    <div class="panel-body">
 <div class="form-group">
     {{
     Form::open(array(
@@ -46,7 +48,8 @@
 </ul>
 @endif
 </div>
-
+</div>
+</div>
 <div class="col-md-6 col-md-offset-1">
     <br>
     <br>

@@ -461,7 +461,7 @@
     </table>
     <table name="userInformation" schema="" catalog="laravel" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="username" sqlType="VARCHAR" length="12" precision="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR" length="20" precision="0" nullable="true" jdbcType="12"/>
       <column name="userage" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="gender" sqlType="TINYINT" length="3" precision="0" nullable="true" jdbcType="-6"/>
       <column name="city" sqlType="VARCHAR" length="16" precision="0" nullable="true" jdbcType="12"/>

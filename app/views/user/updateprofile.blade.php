@@ -1,23 +1,14 @@
 @extends("layout")
 @section("content")
 <div class="container">
+<script src=""></script>
     <div class="row">
         <div class="col-md-3 col-md-offset-1">
-            <div class="btn-group">
-                <button type="button" class="btn btn-danger">Action</button>
-                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-
-            </div>
+           <div class="panel panel-default">
+               <div class="panel-body">
+                   {{ Form::label("password_confirmation","此部分需要结合JS 产生一系列的选择器")}}
+               </div>
+           </div>
         </div>
     </div>
 </div>

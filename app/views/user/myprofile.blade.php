@@ -1,50 +1,45 @@
 @extends("layout")
+
 @section("content")
+
+<style type="text/css">
+    #allmap {width:900px; height: 500px; overflow: hidden;margin:0;font-family:"微软雅黑";}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A4749739227af1618f7b0d1b588c0e85"></script>
+
 <div class="container">
-    <div class="row">
-        <h1 style="text-align: center">欢迎来到喵星人小站！</h1>
-    </div>
-    <div class="row">
-        <h3 style="text-align: center">请更新以下信息，我们将提供您更好的服务！</h3>
-
-    </div>
-    <br>
-    <div class="row">
-
-        <div class="col-md-4 col-md-offset-3">
-            <div class="form-group">
-                {{
-                Form::open(array(
-                "class"=>"form-horizontal",
-                "role"=>"form",
-                "route" => "user/myprofile",
-                "autocomplete" => "off"
-                ))}}
-            </div>
-            <div class="form-group">
-                {{ Form::label("username","用户名")}}
-                {{ Form::text("username",Input::old("username"),["placeholder"=>"username", "class"=>"form-control" ])}}
-            </div>
-            <div class="form-group">
-                {{ Form::label("password","密码")}}
-                {{ Form::password("password",["placeholder"=>"password", "class"=>"form-control"])}}
-            </div>
-
-            <div class="form-group">
-                {{ Form::submit("登录",["class"=>"btn btn-primary btn-block"])}}
-                {{ Form::close()}}
-            </div>
-            <div class="form-group">
-                <a href="/SignIn">{{ Form::button("注册",["class"=>"btn btn-primary btn-block"])}}</a>
-
-            </div>
-
-            @if($error=$errors->first("password"))
-            <div class="error">
-                {{$error}}
-            </div>
-            @endif
+    <?php
+    $region=UserInformation::where('username','=',Auth::user()->username)->firstOrFail()->region;
+    $community=UserInformation::where('username','=',Auth::user()->username)->firstOrFail()->community;
+    $city=UserInformation::where('username','=',Auth::user()->username)->firstOrFail()->city;
+    ?>
+    <h3>您好 {{Auth::user()->username}}</h3>
+    <h4>您居住在：<?php echo "$region,$community"; ?>附近
+    </h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="allmap"></div>
+                <script type="text/javascript">
+                    // 百度地图API功能
+                    var map = new BMap.Map("allmap");
+                    var point = new BMap.Point(116.331398,39.897445);
+                    map.centerAndZoom(point,12);
+                    // 创建地址解析器实例
+                    var myGeo = new BMap.Geocoder();
+                    // 将地址解析结果显示在地图上,并调整地图视野
+                    myGeo.getPoint("<?php echo "$region$community" ?>", function(point){
+                        if (point) {
+                            map.centerAndZoom(point, 14);
+                            map.addOverlay(new BMap.Marker(point));
+                        }
+                    }, "<?php echo $city?>");
+                </script>
         </div>
     </div>
+
+    </div>
+
 </div>
+
 @stop
