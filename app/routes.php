@@ -48,6 +48,8 @@ Route::group(["before"=>"auth"],function(){
         "uses"=>"UserController@logoutAction"
     ]);
 
+
+
 });
 
 Route::any("/SignIn",[
