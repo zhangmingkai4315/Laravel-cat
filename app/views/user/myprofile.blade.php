@@ -100,6 +100,8 @@
             <div class="col-md-9 col-md-offset-0">
                 <div id="myblog">
                 <h3>我的日志</h3>
+                    <?php echo $blog ;?>
+
                 </div>
             </div>
 

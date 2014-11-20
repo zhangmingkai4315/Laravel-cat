@@ -261,8 +261,10 @@ public function profileAction(){
 
     function myProfileAction(){
 
+        $posts = Post::orderBy('id','desc')->paginate(10);
 
-        return View::make("user/myprofile");
+
+        return View::make("user/myprofile")->nest('blog','blog.index',compact('posts'));
 
     }
     function updateProfileAction(){
