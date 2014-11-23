@@ -7,10 +7,11 @@
     </div>
     <div>
     <ul class="nav navbar-nav">
-        <li><a href="/home">主页</a></li>
+        <li><a href="/">主页</a></li>
         <li><a href="/maps">周边的喵星人</a></li>
         <li><a href="/maps">喵星人家族</a></li>
         <li><a href="/about">关于我们</a></li>
+        <li><a href="/logout">退出</a> </li>
 
     </ul>
     </div>

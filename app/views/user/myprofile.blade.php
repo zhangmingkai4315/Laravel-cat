@@ -3,7 +3,7 @@
 @section("content")
 
 <style type="text/css">
-    #allmap {width:800px; height: 400px; overflow: hidden;margin:0;font-family:"微软雅黑";}
+    #allmap {width:670px; height: 400px; overflow: hidden;margin:0;font-family:"微软雅黑";}
     /* Custom Styles */
     ul.nav-tabs{
         width: 140px;
@@ -59,7 +59,7 @@
                         <ul class="nav nav-pills nav-stacked" role="tablist">
 
                             <li class="">
-                                <a href="#allmap">我的地图</a>
+                                <a href="#mymaplocation">我的地图</a>
                             </li>
                             <li class="">
                                 <a href="#myblog">我的日志</a>
@@ -67,9 +67,8 @@
                             <li class="">
                                 <a href="#mypet">我的宠物</a>
                             </li>
-                            <li class="">
-                                <a href="#friend'sBlog">我的好友</a>
-                            </li>
+
+
                             <li class="">
                                 <a href="#myplan">我的计划</a>
                             </li>
@@ -79,6 +78,8 @@
 
             </div>
             <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-9">
+                <h3 id="mymaplocation">我的地图</h3>
                 <div id="allmap"></div>
                 <script type="text/javascript">
                     // 百度地图API功能
@@ -96,39 +97,35 @@
                         }
                     }, "<?php echo $city?>");
                 </script>
-
-            <div class="col-md-9 col-md-offset-0">
+            </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-9 col-md-offset-2">
                 <div id="myblog">
-                <h3>我的日志</h3>
+                <h3><a href="/blog">我的日志</a></h3>
                     <?php echo $blog ;?>
 
                 </div>
             </div>
-
-
-            <div class="col-md-9 col-md-offset-0">
+            <div class="col-md-9 col-md-offset-2">
                 <div id="mypet">
                 <h3>我的宠物</h3>
                 </div>
             </div>
-
-                <div class="col-md-9 col-md-offset-0">
-                    <div id="friend'sBlog">
-                        <h3>我的好友</h3>
-                    </div>
-                </div>
-
-            <div class="col-md-9 col-md-offset-0">
+            <div class="col-md-9 col-md-offset-2">
                 <div id="myplan">
                 <h3>我的计划</h3>
                 </div>
             </div>
+            </div>
 
-        </div>
+
+       </div>
         <hr>
     </div>
 
 </div>
-</div>
+
 
 @stop

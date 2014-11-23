@@ -48,6 +48,12 @@ Route::group(["before"=>"auth"],function(){
         "uses"=>"UserController@logoutAction"
     ]);
 
+    Route::resource('blog', 'BlogController');
+    Route::any("/blog/search",[
+        "as"=>"blog/search",
+        "uses"=>"BlogController@search"
+    ]);
+
 
 
 });
@@ -65,6 +71,11 @@ Route::any("/group/index",[
 Route::any("/group/add",[
     "as"=>"group/add",
     "uses"=>"GroupController@addAction"
+]);
+
+Route::any("/blog/{id}",[
+    "as"=>"blog/show",
+    "uses"=>"BlogController@showBlog"
 ]);
 
 

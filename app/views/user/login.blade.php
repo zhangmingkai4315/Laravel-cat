@@ -17,12 +17,12 @@
              <div class="col-md-5 col-md-offset-1">
                     <div class="form-group">
                     {{
-                 Form::open(array(
-                "class"=>"form-horizontal",
-                "role"=>"form",
-                "route" => "user/login",
-                "autocomplete" => "off"
-                   ))}}
+                     Form::open(array(
+                    "class"=>"form-horizontal",
+                    "role"=>"form",
+                    "route" => "user/login",
+                    "autocomplete" => "off"
+                       ))}}
                      </div>
                 <div class="form-group">
                     {{ Form::label("username","用户名")}}
