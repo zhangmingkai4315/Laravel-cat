@@ -8,6 +8,8 @@
 
 class Post extends Eloquent {
 
+    protected $fillable = ['username', 'title', 'content'];
+
     public function comments()
     {
         return $this->hasMany('Comment');

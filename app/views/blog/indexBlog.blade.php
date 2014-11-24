@@ -12,13 +12,18 @@
             @foreach ($posts as $post)
 
 
-            <hr>
-            <div class="alert alert-success" role="alert">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+
                 <h4><a href="/blog/{{$post->id}}">{{$post->title}}</a></h4>
-                <p>{{$post->content}}</p>
+                </div>
+                <div class="panel-body">
+                <p>{{$post->read_more}}</p>
                 <p>评论数:{{$post->comment_count}} 更新于:{{$post->updated_at}}<p>
-                <p></p>
-             </div>
+
+               </p>
+               </div>
+            </div>
 
 
             @endforeach

@@ -6,9 +6,9 @@
     <br>
 </div>
 <div class="row">
-<div class="col-md-3 col-md-offset-1">
-<div class="panel panel-default">
-    <div class="panel-body">
+<div class="col-md-4 col-md-offset-1">
+
+
 <div class="form-group">
     {{
     Form::open(array(
@@ -20,20 +20,20 @@
 </div>
 <div class="form-group">
     {{ Form::label("username","用户名")}}
-    {{ Form::text("username",Input::old("username"),["placeholder"=>"username", "class"=>"form-control" ])}}
+    {{ Form::text("username",Input::old("username"),["placeholder"=>"", "class"=>"form-control" ])}}
 
 </div>
 <div class="form-group">
     {{ Form::label("email","邮箱")}}
-    {{ Form::text("email",Input::old("email"),["placeholder"=>"Email", "class"=>"form-control" ])}}
+    {{ Form::text("email",Input::old("email"),["placeholder"=>"", "class"=>"form-control" ])}}
 </div>
 <div class="form-group">
     {{ Form::label("password","密码")}}
-    {{ Form::password("password",["placeholder"=>"password", "class"=>"form-control"])}}
+    {{ Form::password("password",["placeholder"=>"", "class"=>"form-control"])}}
 </div>
 <div class="form-group">
     {{ Form::label("password_confirmation","确认密码")}}
-    {{ Form::password("password_confirmation",["placeholder"=>"password", "class"=>"form-control"])}}
+    {{ Form::password("password_confirmation",["placeholder"=>"", "class"=>"form-control"])}}
 </div>
 
 <div class="form-group">
@@ -47,8 +47,7 @@
     {{implode('',$errors->all('<li class="error">:message</li>'))}}
 </ul>
 @endif
-</div>
-</div>
+
 </div>
 <div class="col-md-6 col-md-offset-1">
     <br>

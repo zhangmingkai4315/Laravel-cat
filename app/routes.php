@@ -53,8 +53,12 @@ Route::group(["before"=>"auth"],function(){
         "as"=>"blog/search",
         "uses"=>"BlogController@search"
     ]);
-
-
+    Route::model('comment','Comment');
+    Route::get('/blog/new', ['as' => 'post.new', 'uses' => 'BlogController@create']);
+    Route::get('/blog/{post}/edit', ['as' => 'post.edit', 'uses' => 'BlogController@edit']);
+    Route::get('/blog/{post}/delete', ['as' => 'post.delete', 'uses' => 'BlogController@delete']);
+    Route::post('/blog/{post}/comment', ['as' => 'comment.new', 'uses' => 'CommentController@newComment']);
+    Route::post('/post/save', ['as' => 'post.save', 'uses' => 'BlogController@save']);
 
 });
 
