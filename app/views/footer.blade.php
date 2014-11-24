@@ -38,8 +38,8 @@
                     <div class="col-xs-3">
                         <h4>赞助商</h4>
                         <ul class="list-unstyled">
-                            <li><a target="_blank" href="http://www.ucloud.cn/">暂无</a></li>
-                            <li><a target="_blank" href="https://www.upyun.com">暂无</a></li>
+                            <li><a target="_blank" href="#">暂无</a></li>
+                            <li><a target="_blank" href="#">暂无</a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,11 +54,7 @@
         </div>
     </div>
 </footer>
-
-
-
-
-<br/>
+    <br/>
 <br/>
 
 

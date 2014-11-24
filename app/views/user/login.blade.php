@@ -11,7 +11,7 @@
     <br>
     <div class="row">
              <div class="col-md-5 col-md-offset-0">
-                <a href="/"><img src="http://t2.qpic.cn/mblogpic/98623f254ea392d76b30/460" width="500px" height="300px" class="shadow" >
+                <a href="/"><img src="http://t2.qpic.cn/mblogpic/98623f254ea392d76b30/460"  class="shadow img-responsive" alt="Responsive image" >
                 </a>
              </div>
              <div class="col-md-5 col-md-offset-1">

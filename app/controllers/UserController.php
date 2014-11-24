@@ -260,9 +260,19 @@ public function profileAction(){
     }
 
     function myProfileAction(){
+        $user=UserInformation::where('username','=',Auth::user()->username)->firstOrFail();
+
+        $region=$user->region;
+        $city=$user->city;
+        $community=$user->community;
+        $data=[
+            'region'=>$region,
+            'city'=>$city,
+            'community'=>$community,
+        ];
 
         $posts = Post::where('username','=',Auth::user()->username)->orderBy('id','desc')->paginate(10);
-        return View::make("user/myprofile")->nest('blog','blog.index',compact('posts'));
+        return View::make("user/myprofile",$data)->nest('blog','blog.index',compact('posts'));
 
     }
     function updateProfileAction(){

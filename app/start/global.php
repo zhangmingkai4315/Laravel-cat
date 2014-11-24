@@ -51,6 +51,7 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+
 /*
 |--------------------------------------------------------------------------
 | Maintenance Mode Handler
@@ -61,6 +62,12 @@ App::error(function(Exception $exception, $code)
 | to the user if maintenance mode is in effect for the application.
 |
 */
+
+
+App::missing(function($exception)
+{
+    return Response::view('errors.missing', array(), 404);
+});
 
 App::down(function()
 {
