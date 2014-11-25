@@ -10,10 +10,46 @@
     </div>
     <br>
     <div class="row">
+
              <div class="col-md-5 col-md-offset-0">
-                <a href="/"><img src="http://t2.qpic.cn/mblogpic/98623f254ea392d76b30/460"  class="shadow img-responsive" alt="Responsive image" >
-                </a>
+                 <br>
+                 <br>
+                 <div class="bs-example">
+                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                         <ol class="carousel-indicators">
+
+                             <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                             <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                             <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                         </ol>
+                         <div class="carousel-inner" role="listbox">
+
+                             <div class="item active">
+
+                                 <img class="shadow" alt="First slide [900x500]" src="http://zhangmingkai2014.qiniudn.com/cat-002.jpg" data-holder-rendered="true">
+                             </div>
+                             <div class="item">
+                                 <img  class="shadow" alt="Second slide [900x500]" src="http://zhangmingkai2014.qiniudn.com/123.jpg" data-holder-rendered="true">
+                             </div>
+                             <div class="item">
+                                 <img   alt="Third slide [900x500]" src="http://zhangmingkai2014.qiniudn.com/DSC_0374.JPG" data-holder-rendered="true">
+                             </div>
+                         </div>
+                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                             <span class="glyphicon glyphicon-chevron-left"></span>
+                             <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                             <span class="glyphicon glyphicon-chevron-right"></span>
+                             <span class="sr-only">Next</span>
+                         </a>
+                     </div>
+                 </div>
+
+
              </div>
+
+
              <div class="col-md-5 col-md-offset-1">
                     <div class="form-group">
                     {{

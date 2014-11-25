@@ -6,11 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <meta name="description" content="喵星人小站 - 提升您和宠物的生活质量，让您的宠物更愉快的陪伴您。">
+        <meta name="keywords" content="喵星人，汪星人，社区，宠物，宠物医院，代管宠物，宠物的私家秘书">
+        <meta name="author" content="mingkai <zhangmingkai.1989@gmail.com>">
+
+
         <!--
                {{ HTML::style('css/zebra/zebra_form.css')}}
 
@@ -21,10 +22,14 @@
         {{ HTML::style('css/bootstrap-theme.min.css')}}
         {{ HTML::script('./js/bootstrap.min.js')}}
         -->
-        <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <!-- Optional theme -->
+        <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="data:text/css;charset=utf-8," data-href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+        <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
         <!--
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
