@@ -28,4 +28,10 @@ class UserInformation extends Eloquent implements UserInterface, RemindableInter
 
     ];
 
+    public function PetInfo()
+    {
+        return $this->hasMany('PetInfo','userInformation_id','id');
+    }
+
+
 }

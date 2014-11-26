@@ -59,6 +59,7 @@ Route::group(["before"=>"auth"],function(){
     Route::get('/blog/{post}/delete', ['as' => 'post.delete', 'uses' => 'BlogController@delete']);
     Route::post('/blog/{post}/comment', ['as' => 'comment.new', 'uses' => 'CommentController@newComment']);
     Route::post('/post/save', ['as' => 'post.save', 'uses' => 'BlogController@save']);
+    Route::get('/petinfo', ['as' => 'pet.info', 'uses' => 'petController@showInfo']);
 
 });
 
