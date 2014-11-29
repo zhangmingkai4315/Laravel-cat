@@ -12,7 +12,7 @@
     <div class="row">
 
              <div class="col-md-5 col-md-offset-0">
-                 <br>
+
                  <br>
                  <div class="bs-example">
                      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
