@@ -57,7 +57,7 @@ return array(
 			'host'      => '192.168.2.165',
 			'database'  => 'laravel',
 			'username'  => 'root',
-			'password'  => 'sdkai1989',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
